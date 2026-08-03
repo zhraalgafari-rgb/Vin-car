@@ -1,0 +1,21 @@
+[project]
+ref = "your-project-ref"
+organization_slug = "your-org-slug"
+
+[api]
+enabled = true
+port = 54321
+
+[auth]
+enabled = true
+site_url = "http://localhost:3000"
+redirect_url = "http://localhost:3000/dashboard"
+
+[storage]
+enabled = true
+
+[edge_functions]
+enabled = true
+
+[db]
+port = 54322

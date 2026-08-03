@@ -1,0 +1,17 @@
+@layer base {
+  [dir="rtl"] {
+    .rtl\:right-auto {
+      right: auto;
+    }
+    .rtl\:left-0 {
+      left: 0;
+      right: auto;
+    }
+    .rtl\:text-right {
+      text-align: right;
+    }
+    .rtl\:text-left {
+      text-align: left;
+    }
+  }
+}

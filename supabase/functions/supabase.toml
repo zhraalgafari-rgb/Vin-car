@@ -1,0 +1,7 @@
+[functions]
+ai-ocr = { verify_jwt = true }
+ai-extract = { verify_jwt = true }
+ai-embed = { verify_jwt = true }
+ai-vision = { verify_jwt = true }
+ai-process-upload = { verify_jwt = true }
+ai-schedule = { verify_jwt = true }

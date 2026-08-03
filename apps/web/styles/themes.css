@@ -1,0 +1,7 @@
+@layer base {
+  :root {
+    --sidebar-width: 260px;
+    --sidebar-width-collapsed: 60px;
+    --header-height: 60px;
+  }
+}
