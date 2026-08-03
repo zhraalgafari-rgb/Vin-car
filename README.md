@@ -1,31 +1,43 @@
 # Automotive Parts Knowledge Management Platform
 
-An AI-powered, VIN-centric web application for automotive spare parts importers. Every VIN becomes a permanent digital knowledge record that grows continuously.
+An AI-powered, VIN-centric web application for automotive spare parts importers.
+
+## Status
+
+### Phases Completed
+- ✅ **Phase 1**: Foundation — Next.js, Supabase, Auth, DB migrations, RLS (130 files)
+- ✅ **Phase 2**: VIN & Vehicle Core — VIN decode, workspace, parts CRUD (26 files)
+- ✅ **Phase 3**: Suppliers, Customers & Orders — Management and workflow (26 files)
+- ✅ **Phase 4**: Conversations & AI Engine — OCR, extraction, vision, embeddings (16 files)
+- ✅ **Phase 5**: Search & Intelligence — FTS, trigram, vector, hybrid search (16 files)
+- 🔄 **Phase 6**: Polish & Production — In progress
 
 ## Tech Stack
 
-- **Frontend**: Next.js 14+ (App Router), React 18, TypeScript, Tailwind CSS, shadcn/ui
-- **Backend**: Supabase (PostgreSQL, Auth, Storage, Realtime)
-- **AI**: OCR (Tesseract.js), Vision (GPT-4 Vision/Claude), LLM (Claude/GPT-4), Embeddings (OpenAI)
-- **Search**: PostgreSQL Full-Text Search, pg_trgm, Vector Embeddings (pgvector)
-
-## Getting Started
-
-1. Clone the repository
-2. Copy `.env.example` to `.env` and fill in your credentials
-3. Run `npm install`
-4. Run `npm run dev`
+| Layer | Technology |
+|-------|-----------|
+| Frontend | Next.js 14+ (App Router), React 18, TypeScript, Tailwind CSS, shadcn/ui |
+| Backend | Supabase (PostgreSQL, Auth, Storage, Realtime) |
+| AI | Tesseract.js, GPT-4 Vision, Claude, OpenAI Embeddings |
+| Search | PostgreSQL FTS + pg_trgm + pgvector |
+| Deployment | Vercel (frontend), Supabase (backend) |
 
 ## Project Structure
 
 ```
-apps/web/          # Next.js frontend
-apps/api/          # API routes
-packages/db/       # Database types and migrations
-packages/ai/       # AI processing modules
-packages/search/   # Search infrastructure
-packages/shared/   # Shared utilities
-supabase/          # Supabase configuration, migrations, edge functions
+automotive-parts-kms/
+├── apps/web/                    # Next.js frontend
+│   ├── app/                     # App Router pages
+│   ├── components/              # React components
+│   ├── hooks/                   # Custom hooks
+│   ├── lib/                     # Utilities and clients
+│   ├── types/                   # TypeScript types
+│   └── styles/                  # CSS files
+├── supabase/
+│   ├── migrations/              # SQL migrations (18 files)
+│   └── functions/               # Edge functions (6 functions)
+├── docker-compose.yml
+└── README.md
 ```
 
 ## Features
@@ -38,3 +50,9 @@ supabase/          # Supabase configuration, migrations, edge functions
 - Bilingual support (Arabic RTL / English LTR)
 - Dark/Light mode
 - Real-time updates via Supabase Realtime
+- Drag-and-drop interface
+- Bulk editing
+- Saved views
+- Keyboard shortcuts
+- Error boundaries
+- Loading skeletons
