@@ -1,4 +1,8 @@
 import { useSearch } from "@/hooks/use-search";
+import { VinCard } from "@/components/vins/vin-card";
+import { PartCard } from "@/components/parts/part-card";
+import { SupplierCard } from "@/components/suppliers/supplier-card";
+import { CustomerCard } from "@/components/customers/customer-card";
 
 interface SearchResultsProps {
   query: string;
@@ -19,6 +23,9 @@ export function SearchResults({ query }: SearchResultsProps) {
             <span className="font-medium">{result.vin || result.name || result.english_name}</span>
             <span className="text-sm text-muted-foreground">{result.type}</span>
           </div>
+          <p className="text-sm text-muted-foreground mt-1">
+            {result.brand} {result.model} | {result.oem_number}
+          </p>
         </div>
       ))}
     </div>
